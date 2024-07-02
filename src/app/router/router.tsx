@@ -1,6 +1,7 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
 import RootLayout from 'shared/layouts/RootLayout/ui/RootLayout.tsx';
 import { ErrorQuiz, Quiz } from 'pages/Quiz';
+import { Loader } from 'pages/Loader';
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
                 path: 'quiz/:id',
                 element: <Quiz />,
                 errorElement: <ErrorQuiz />,
+            },
+            {
+                index: true,
+                path: 'loader',
+                element: <Loader />,
             },
         ],
     },

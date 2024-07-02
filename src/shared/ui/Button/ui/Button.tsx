@@ -12,6 +12,7 @@ const Button = (props: ButtonProps) => {
     return (
         <button
             {...otherProps}
+            disabled={disabled}
             className={cn(
                 classes.reset,
                 classes.base,

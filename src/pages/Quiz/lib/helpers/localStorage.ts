@@ -1,4 +1,4 @@
-export const getLocalStorage = (questionId: string) => {
+export const getLocalStorage = (questionId: string): string | string[] | null => {
     const localStorageData = localStorage.getItem('quiz');
 
     return localStorageData ? JSON.parse(localStorageData)[questionId] : null;

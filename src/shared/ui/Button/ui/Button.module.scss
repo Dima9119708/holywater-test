@@ -15,13 +15,11 @@
 .primary {
     color: var(--color-03);
     background-color: var(--color-02);
-    outline: 0.2rem solid var(--color-06);
     font-weight: 800;
     transition: background-color 0.2s ease;
 
     &:hover {
         background-color: var(--color-12);
-        outline: 0.2rem solid var(--color-06);
     }
 }
 

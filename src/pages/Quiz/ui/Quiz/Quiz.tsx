@@ -49,6 +49,7 @@ const Quiz = () => {
 
     const onNext = async () => {
         if (isEnd) {
+            navigate(`/loader`);
             return;
         }
 

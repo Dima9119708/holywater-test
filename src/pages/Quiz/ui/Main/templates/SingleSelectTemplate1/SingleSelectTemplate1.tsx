@@ -19,7 +19,7 @@ const SingleSelectTemplate1 = (props: SingleSelectTemplate1Props) => {
     const [activeQuestion, setActiveQuestion] = useState<null | string>(() => {
         const initData = getLocalStorage(questionId);
 
-        if (!Array.isArray(initData)) {
+        if (initData !== undefined && !Array.isArray(initData)) {
             return initData;
         }
 

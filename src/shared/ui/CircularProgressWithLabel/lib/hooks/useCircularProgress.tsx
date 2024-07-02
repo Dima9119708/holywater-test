@@ -5,6 +5,7 @@ interface UseCircularProgressIntervalProps {
     step: number;
     minValue?: number;
     maxValue?: number;
+    onEndAnimation?: () => void;
 }
 
 export interface UseCircularProgressProps extends UseCircularProgressIntervalProps {
@@ -16,18 +17,25 @@ export interface UseCircularProgressProps extends UseCircularProgressIntervalPro
 }
 
 export const useCircularProgressInterval = (props: UseCircularProgressIntervalProps) => {
-    const { time, step, minValue = 0, maxValue = 100 } = props;
+    const { time, step, minValue = 0, maxValue = 100, onEndAnimation } = props;
 
     const [percent, setValue] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setValue((v) => {
-                return v >= maxValue ? minValue : Math.ceil(v + maxValue / step);
+                return v >= maxValue ? maxValue : Math.ceil(v + maxValue / step);
             });
         }, time / step);
 
-        return () => clearInterval(interval);
+        const timeOut = setTimeout(() => {
+            onEndAnimation && onEndAnimation();
+        }, time);
+
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timeOut);
+        };
     }, [time, step, maxValue, minValue]);
 
     return {
@@ -92,7 +100,7 @@ export const useCircularProgress = (props: UseCircularProgressProps) => {
             strokeDashoffset: offset,
             transform: 'rotate(-90 16 16)',
             strokeLinecap: 'round',
-            stroke: 'var(--color-05)',
+            stroke: 'var(--color-02)',
             style: {
                 transition: `all ${animateDuration}s ease`,
             },
