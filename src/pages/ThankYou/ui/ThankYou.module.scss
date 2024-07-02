@@ -1,5 +1,7 @@
-.title {
-    padding-top: 10rem;
+.block_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .subtitle {

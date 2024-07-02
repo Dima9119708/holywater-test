@@ -53,14 +53,8 @@ const ThankYou = () => {
 
     return (
         <Layout gridTemplateRows="1fr auto">
-            <div>
-                <Typography
-                    className={classes.title}
-                    variant="h1"
-                    fontWeight="400"
-                    font="tertiary"
-                    fontSize={8}
-                >
+            <div className={classes.block_head}>
+                <Typography variant="h1" fontWeight="400" font="tertiary" fontSize={8}>
                     {t('thank_you_message')}
                 </Typography>
                 <Typography className={classes.subtitle} variant="subtitle1" color="09">
