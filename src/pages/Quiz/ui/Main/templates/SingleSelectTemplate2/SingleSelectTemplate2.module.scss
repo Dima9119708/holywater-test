@@ -1,0 +1,21 @@
+.row {
+    display: flex;
+    gap: 0 1.2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.image {
+    height: 5.2rem;
+    width: 5.2rem;
+    margin-bottom: 1rem;
+}
+
+.spacing {
+    margin-bottom: 1.2rem;
+}

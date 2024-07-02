@@ -1,0 +1,152 @@
+[
+    {
+        "id": "1",
+        "type": "single-select__template-1",
+        "title": "language_question",
+        "subtitle": "choose_language_label",
+        "questions": [
+            {
+                "id": "1",
+                "translateKey": "english",
+                "img": null
+            },
+            {
+                "id": "2",
+                "translateKey": "french",
+                "img": null
+            },
+            {
+                "id": "3",
+                "translateKey": "german",
+                "img": null
+            },
+            {
+                "id": "4",
+                "translateKey": "spanish",
+                "img": null
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "type": "single-select__template-2",
+        "title": "identify_gender_question",
+        "subtitle": "identify_self_description",
+        "questions": [
+            {
+                "id": "1",
+                "translateKey": "female",
+                "img": "/src/shared/assets/images/1.png"
+            },
+            {
+                "id": "2",
+                "translateKey": "male",
+                "img": "/src/shared/assets/images/2.png"
+            },
+            {
+                "id": "3",
+                "translateKey": "other",
+                "img": "/src/shared/assets/images/3.png"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "type": "single-select__template-1",
+        "title": "age_question",
+        "subtitle": null,
+        "questions": [
+            {
+                "id": "1",
+                "translateKey": "age_18_29",
+                "img": null
+            },
+            {
+                "id": "2",
+                "translateKey": "age_30_39",
+                "img": null
+            },
+            {
+                "id": "3",
+                "translateKey": "age_40_49",
+                "img": null
+            },
+            {
+                "id": "4",
+                "translateKey": "age_50_plus",
+                "img": null
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "type": "multiple-select__template",
+        "title": "hate_most_in_book_question",
+        "subtitle": null,
+        "questions": [
+            {
+                "id": "1",
+                "translateKey": "hate_lack_of_logic",
+                "img": null
+            },
+            {
+                "id": "2",
+                "translateKey": "hate_slow_speed",
+                "img": null
+            },
+            {
+                "id": "3",
+                "translateKey": "hate_lack_of_humor",
+                "img": null
+            },
+            {
+                "id": "4",
+                "translateKey": "hate_generic_ending",
+                "img": null
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "type": "bubble-template",
+        "title": "favorite_topics_question",
+        "subtitle": "choose_up_to_3_topics",
+        "questions": [
+            {
+                "id": "1",
+                "translateKey": "topic_werewolf",
+                "img": "/src/shared/assets/images/Emoji.svg"
+            },
+            {
+                "id": "2",
+                "translateKey": "topic_action",
+                "img": "/src/shared/assets/images/Emoji-2.svg"
+            },
+            {
+                "id": "3",
+                "translateKey": "topic_royal_obsession",
+                "img": "/src/shared/assets/images/Emoji-4.svg"
+            },
+            {
+                "id": "4",
+                "translateKey": "topic_billionaire",
+                "img": "/src/shared/assets/images/Emoji-6.svg"
+            },
+            {
+                "id": "5",
+                "translateKey": "topic_bad_boy",
+                "img": "/src/shared/assets/images/Emoji-7.svg"
+            },
+            {
+                "id": "6",
+                "translateKey": "topic_young_adult",
+                "img": "/src/shared/assets/images/Emoji-10.svg"
+            },
+            {
+                "id": "7",
+                "translateKey": "topic_romance",
+                "img": "/src/shared/assets/images/Emoji-10.svg"
+            }
+        ]
+    }
+]

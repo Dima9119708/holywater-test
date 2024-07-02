@@ -1,0 +1,5 @@
+.theme-default {
+    @each $color, $value in $theme-default {
+        --#{$color}: #{$value};
+    }
+}

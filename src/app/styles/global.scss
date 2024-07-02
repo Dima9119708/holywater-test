@@ -1,0 +1,24 @@
+:root {
+    --font-primary: #{$font-primary};
+    --font-secondary: #{$font-secondary};
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    font-family: var(--font-secondary), serif;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+}

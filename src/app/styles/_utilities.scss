@@ -1,0 +1,21 @@
+@each $name, $value in $font-weight {
+    .font-weight_#{$name} {
+        font-weight: $value;
+    }
+}
+
+@each $name, $_ in $theme-default {
+    .#{$name} {
+        color: var(--#{$name});
+    }
+}
+
+@each $name, $value in $font-sizes {
+    .font-size_#{$name} {
+        font-size: $value;
+    }
+}
+
+.w-full {
+    width: 100%;
+}

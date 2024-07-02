@@ -1,0 +1,40 @@
+.reset {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.base {
+    padding: 2.6rem 2rem;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    width: 100%;
+    outline: none;
+    font-family: var(--font-secondary), serif;
+    color: var(--color-03);
+}
+
+.primary {
+    background-color: var(--color-06);
+    transition: background-color 0.1s ease;
+}
+
+.primary:focus {
+    background-color: var(--color-10);
+    transition: background-color 0.1s ease;
+}
+
+.primary::placeholder {
+    color: var(--color-04);
+}
+
+.error {
+    border: 0.2rem solid var(--color-09);
+}
+
+.error_message {
+    color: var(--color-02);
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+}

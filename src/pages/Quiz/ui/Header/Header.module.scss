@@ -1,0 +1,16 @@
+.progress_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+}
+
+.step_indicator {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    flex: 1;
+}
+
+.back {
+    cursor: pointer;
+}
