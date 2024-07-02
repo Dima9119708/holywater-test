@@ -1,0 +1,29 @@
+.title {
+    padding: 7.2rem 0 0;
+    text-align: center;
+    line-height: 3.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.subtitle {
+    margin-bottom: 5.6rem;
+}
+
+.input {
+    margin-bottom: 5.6rem;
+}
+
+.block_text {
+    line-height: 1.8rem;
+    width: 100%;
+    text-align: center;
+}
+
+.text_highlight {
+    color: var(--color-02);
+
+    &.terms_of_use {
+        display: block;
+        margin-top: 0.8rem;
+    }
+}

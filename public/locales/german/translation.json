@@ -29,6 +29,18 @@
     "female": "Weiblich",
     "male": "Männlich",
     "finding_collections_for_you": "Sammlungen für Sie finden...",
+    "enter_email_access": "Geben Sie Ihre E-Mail ein, um vollen Zugriff zu erhalten",
+    "agree_privacy_terms": "Durch Fortfahren stimme ich der <PrivacyPolicy>Datenschutzrichtlinie</PrivacyPolicy> und den <TermsOfUse>Nutzungsbedingungen</TermsOfUse> zu",
+    "invalid_email": "Ungültige E-Mail",
+    "support_quiz_message": "für Ihre Unterstützung und das Bestehen des Quiz",
+    "thank_you_message": "Danke",
+    "retake_quiz_message": "Quiz wiederholen",
+    "download_answers_message": "Meine Antworten herunterladen",
+    "email": "Email",
     "other": "Andere",
-    "next": "Weiter"
+    "next": "Weiter",
+    "answer": "Antwort",
+    "title": "Titel",
+    "type": "Typ",
+    "order": "Reihenfolge"
 }

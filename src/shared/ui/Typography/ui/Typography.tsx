@@ -5,7 +5,7 @@ import classes from './Typography.module.scss';
 interface TypographyProps {
     className?: string;
     variant: 'h1' | 'subtitle1' | 'body1';
-    font?: 'primary' | 'secondary';
+    font?: 'primary' | 'secondary' | 'tertiary';
     fontWeight?: '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900';
     color?: `${number}`;
     fontSize?: number;

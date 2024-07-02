@@ -1,5 +1,8 @@
-$font-primary: 'Nunito Sans', sans-serif;
-$font-secondary: 'Albert Sans', sans-serif;
+$font-family: (
+    'primary': 'Nunito Sans',
+    'secondary': 'Albert Sans',
+    'tertiary': 'Niconne',
+);
 $theme-default: (
     'color-01': #1f002b,
     'color-02': #e4229c,
@@ -21,6 +24,7 @@ $font-sizes: (
     5: 3rem,
     6: 1.3rem,
     7: 1.2rem,
+    8: 3.6rem,
 );
 $font-weight: (
     '100': 100,

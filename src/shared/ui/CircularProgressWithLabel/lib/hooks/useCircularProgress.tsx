@@ -28,9 +28,12 @@ export const useCircularProgressInterval = (props: UseCircularProgressIntervalPr
             });
         }, time / step);
 
-        const timeOut = setTimeout(() => {
-            onEndAnimation && onEndAnimation();
-        }, time);
+        const timeOut = setTimeout(
+            () => {
+                onEndAnimation && onEndAnimation();
+            },
+            time + time / step,
+        );
 
         return () => {
             clearInterval(interval);

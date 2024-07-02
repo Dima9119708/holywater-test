@@ -1,6 +1,7 @@
 :root {
-    --font-primary: #{$font-primary};
-    --font-secondary: #{$font-secondary};
+    @each $name, $value in $font-family {
+        --font-#{$name}: #{$value}, sans-serif;
+    }
 }
 
 * {

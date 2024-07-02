@@ -1,16 +1,15 @@
-import { useTranslation } from 'react-i18next';
-import { Card } from 'shared/ui/Card';
-import classes from './MultipleSelectTemplate.module.scss';
 import { Typography } from 'shared/ui/Typography';
-import { Checkbox } from 'shared/ui/Checkbox';
+import { Card } from 'shared/ui/Card';
+import classes from './SingleSelectTemplate.module.scss';
+import { useTranslation } from 'react-i18next';
 import { TemplateProps } from 'pages/Quiz/types/types.ts';
 import { useTemplate } from 'pages/Quiz/lib/hooks/useTemplate.ts';
 
-const MultipleSelectTemplate = (props: TemplateProps) => {
+const SingleSelectTemplate = (props: TemplateProps) => {
     const { question } = props;
     const { t } = useTranslation();
 
-    const { onMultiSelect, isActive } = useTemplate(question);
+    const { onSingleSelect, isActive } = useTemplate(question);
 
     return (
         <>
@@ -20,16 +19,15 @@ const MultipleSelectTemplate = (props: TemplateProps) => {
 
                 return (
                     <Card
-                        key={translateKey}
+                        key={id}
                         active={active}
-                        className={classes.card}
+                        className={classes.spacing}
                         cursorPointer
-                        onClick={onMultiSelect(answer)}
+                        onClick={onSingleSelect(answer)}
                     >
                         <Typography variant="body1" fontSize={3} fontWeight="500">
                             {t(translateKey)}
                         </Typography>
-                        <Checkbox checked={active} />
                     </Card>
                 );
             })}
@@ -37,4 +35,4 @@ const MultipleSelectTemplate = (props: TemplateProps) => {
     );
 };
 
-export default MultipleSelectTemplate;
+export default SingleSelectTemplate;

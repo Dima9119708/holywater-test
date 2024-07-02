@@ -15,12 +15,12 @@
 }
 
 .primary {
-    background-color: var(--color-06);
+    background-color: var(--color-07);
     transition: background-color 0.1s ease;
 }
 
 .primary:focus {
-    background-color: var(--color-10);
+    background-color: var(--color-11);
     transition: background-color 0.1s ease;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .error {
-    border: 0.2rem solid var(--color-09);
+    border: 0.2rem solid var(--color-10);
 }
 
 .error_message {

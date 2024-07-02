@@ -1,25 +1,15 @@
 import Header from 'pages/Quiz/ui/Header/Header.tsx';
-import Main, { Questions } from 'pages/Quiz/ui/Main/Main.tsx';
+import Main from 'pages/Quiz/ui/Main/Main.tsx';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import dataJson from '../../../../../mock/data.json';
 import Footer from 'pages/Quiz/ui/Footer/Footer.tsx';
-import { useLocalStorageQuiz } from 'pages/Quiz/lib/hooks/useLocalStorageQuiz.ts';
 import i18 from 'shared/config/i18';
-
-type QuizType =
-    | 'single-select__template-1'
-    | 'single-select__template-2'
-    | 'multiple-select__template'
-    | 'bubble-template';
-
-export interface QuizResponse {
-    id: string;
-    type: QuizType;
-    title: string;
-    subtitle: string | null;
-    questions: Questions;
-}
+import { getLocalStorage } from 'shared/lib/helpers/localStorage.ts';
+import { QuizResponse } from 'pages/Quiz';
+import { RoutersPath } from 'shared/const/routers.ts';
+import { LANGUAGE_QUESTION_KEY } from 'shared/const';
+import { Layout } from 'shared/layouts/Layout';
 
 const Quiz = () => {
     const { id } = useParams();
@@ -49,28 +39,28 @@ const Quiz = () => {
 
     const onNext = async () => {
         if (isEnd) {
-            navigate(`/loader`);
+            navigate(RoutersPath.LOADER);
             return;
         }
 
-        if (currentQuiz.title === 'language_question') {
-            const answerId = useLocalStorageQuiz.getState().getLocalStorage(currentQuiz.id);
-            const answer = currentQuiz.questions.find(({ id }) => id === answerId);
+        if (currentQuiz.title === LANGUAGE_QUESTION_KEY) {
+            const answerId = getLocalStorage(currentQuiz.id)?.answers[0].id;
+            const answer = currentQuiz.answers.find(({ id }) => id === answerId);
 
             if (answer) {
                 await i18.changeLanguage(answer.translateKey);
             }
         }
 
-        navigate(`/quiz/${quizId + 1}`);
+        navigate(`${RoutersPath.QUIZ}${quizId + 1}`);
     };
 
     return (
-        <>
+        <Layout gridTemplateRows="auto 1fr auto">
             <Header isShowBack={!isStart} onBack={onBack} value={quizId} maxValue={data.length} />
-            <Main data={currentQuiz} />
+            <Main question={currentQuiz} />
             <Footer onNext={onNext} />
-        </>
+        </Layout>
     );
 };
 

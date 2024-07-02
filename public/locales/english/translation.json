@@ -23,12 +23,25 @@
     "topic_young_adult": "Young Adult",
     "topic_romance": "Romance",
     "finding_collections_for_you": "Finding collections for you...",
+    "enter_email_access": "Enter your email to get full access",
+    "email": "Email",
+    "agree_privacy_terms": "By continuing I agree with <PrivacyPolicy>Privacy policy</PrivacyPolicy> and <TermsOfUse>Terms of use.</TermsOfUse>",
+    "invalid_email": "Invalid email",
+    "support_quiz_message": "for supporting us and passing quiz",
     "english": "English",
+    "thank_you_message": "Thank you",
+    "retake_quiz_message": "Retake quiz",
+    "download_answers_message": "Download my answers",
     "french": "French",
     "german": "German",
     "spanish": "Spanish",
     "female": "Female",
     "male": "Male",
     "other": "Other",
-    "next": "Next"
+    "next": "Next",
+    "answer": "answer",
+    "title": "title",
+    "type": "type",
+    "order": "order"
+
 }

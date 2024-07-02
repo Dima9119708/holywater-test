@@ -28,7 +28,20 @@
     "spanish": "Espagnol",
     "female": "Femme",
     "finding_collections_for_you": "Recherche de collections pour vous...",
+    "enter_email_access": "Entrez votre email pour obtenir un accès complet",
+    "agree_privacy_terms": "En continuant, j'accepte la <PrivacyPolicy>politique de confidentialité</PrivacyPolicy> et les <TermsOfUse>conditions d'utilisation.</TermsOfUse>",
+    "invalid_email": "E-mail invalide",
+    "support_quiz_message": "pour nous soutenir et réussir le quiz",
+    "thank_you_message": "Merci",
+    "retake_quiz_message": "Repasser le quiz",
+    "download_answers_message": "Télécharger mes réponses",
+    "email": "Email",
     "male": "Homme",
     "other": "Autre",
-    "next": "Suivant"
+    "next": "Suivant",
+    "answer": "ordre",
+    "title": "titre",
+    "type": "type",
+    "order": "réponse"
+
 }

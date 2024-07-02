@@ -1,10 +1,10 @@
 [
     {
         "id": "1",
-        "type": "single-select__template-1",
+        "type": "single-select",
         "title": "language_question",
         "subtitle": "choose_language_label",
-        "questions": [
+        "answers": [
             {
                 "id": "1",
                 "translateKey": "english",
@@ -29,10 +29,10 @@
     },
     {
         "id": "2",
-        "type": "single-select__template-2",
+        "type": "single-select-image",
         "title": "identify_gender_question",
         "subtitle": "identify_self_description",
-        "questions": [
+        "answers": [
             {
                 "id": "1",
                 "translateKey": "female",
@@ -52,10 +52,10 @@
     },
     {
         "id": "3",
-        "type": "single-select__template-1",
+        "type": "single-select",
         "title": "age_question",
         "subtitle": null,
-        "questions": [
+        "answers": [
             {
                 "id": "1",
                 "translateKey": "age_18_29",
@@ -80,10 +80,10 @@
     },
     {
         "id": "4",
-        "type": "multiple-select__template",
+        "type": "multiple-select",
         "title": "hate_most_in_book_question",
         "subtitle": null,
-        "questions": [
+        "answers": [
             {
                 "id": "1",
                 "translateKey": "hate_lack_of_logic",
@@ -108,10 +108,10 @@
     },
     {
         "id": "5",
-        "type": "bubble-template",
+        "type": "bubble",
         "title": "favorite_topics_question",
         "subtitle": "choose_up_to_3_topics",
-        "questions": [
+        "answers": [
             {
                 "id": "1",
                 "translateKey": "topic_werewolf",

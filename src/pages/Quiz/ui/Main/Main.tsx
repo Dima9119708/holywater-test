@@ -1,35 +1,24 @@
-import SingleSelectTemplate1 from 'pages/Quiz/ui/Main/templates/SingleSelectTemplate1/SingleSelectTemplate1.tsx';
+import SingleSelectTemplate from 'pages/Quiz/ui/Main/templates/SingleSelectTemplate/SingleSelectTemplate.tsx';
 import classes from './Main.module.scss';
 import MainTitle from 'pages/Quiz/ui/Main/MainTitle/MainTitle.tsx';
-import SingleSelectTemplate2 from 'pages/Quiz/ui/Main/templates/SingleSelectTemplate2/SingleSelectTemplate2.tsx';
+import SingleSelectImageTemplate from 'pages/Quiz/ui/Main/templates/SingleSelectImageTemplate/SingleSelectImageTemplate.tsx';
 import MultipleSelectTemplate from 'pages/Quiz/ui/Main/templates/MultipleSelectTemplate/MultipleSelectTemplate.tsx';
 import BubbleTemplate from 'pages/Quiz/ui/Main/templates/BubbleTemplate/BubbleTemplate.tsx';
-import { QuizResponse } from 'pages/Quiz/ui/Quiz/Quiz.tsx';
 
-interface MainProps {
-    data: QuizResponse;
-}
-
-export type Questions = { id: string; translateKey: string; img?: string }[];
+import { MainProps } from 'pages/Quiz/types/types.ts';
 
 const Main = (props: MainProps) => {
-    const { data } = props;
+    const { question } = props;
 
     return (
         <div className={classes.main}>
-            <MainTitle title={data.title} subtitle={data.subtitle} />
-            {data.type === 'single-select__template-1' && (
-                <SingleSelectTemplate1 questionId={data.id} questions={data.questions} />
+            <MainTitle title={question.title} subtitle={question.subtitle} />
+            {question.type === 'single-select' && <SingleSelectTemplate question={question} />}
+            {question.type === 'single-select-image' && (
+                <SingleSelectImageTemplate question={question} />
             )}
-            {data.type === 'single-select__template-2' && (
-                <SingleSelectTemplate2 questionId={data.id} questions={data.questions} />
-            )}
-            {data.type === 'multiple-select__template' && (
-                <MultipleSelectTemplate questionId={data.id} questions={data.questions} />
-            )}
-            {data.type === 'bubble-template' && (
-                <BubbleTemplate questionId={data.id} questions={data.questions} />
-            )}
+            {question.type === 'multiple-select' && <MultipleSelectTemplate question={question} />}
+            {question.type === 'bubble' && <BubbleTemplate question={question} />}
         </div>
     );
 };

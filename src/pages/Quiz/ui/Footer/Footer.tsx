@@ -11,7 +11,7 @@ const Footer = (props: FooterProps) => {
     const { t } = useTranslation();
 
     const isDisabled = useButtonDisabled((state) => state.isDisabled);
-    console.log('isDisabled =>', isDisabled);
+
     return (
         <div>
             <Button type="button" disabled={isDisabled} className="w-full" onClick={onNext}>
