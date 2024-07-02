@@ -1,7 +1,7 @@
 .root {
-    display: grid;
-    padding: 2rem;
+    display: flex;
     min-height: 100%;
+    padding: 2rem;
     background-color: var(--color-01);
     color: var(--color-03);
 }
