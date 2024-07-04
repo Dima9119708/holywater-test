@@ -13,8 +13,15 @@ const BubbleTemplate = (props: TemplateProps) => {
 
     const { onMultiSelect, isActive } = useTemplate(question);
 
-    const { onTouchMove, onTouchStart, moveRef, onPointerMove, onPointerDown, wrapRef } =
-        useSlide();
+    const {
+        onTouchMove,
+        onTouchStart,
+        onPointerMove,
+        onPointerDown,
+        onPointerUp,
+        wrapRef,
+        moveRef,
+    } = useSlide();
 
     const chunkedArray = useMemo(() => {
         const result = [];
@@ -33,6 +40,7 @@ const BubbleTemplate = (props: TemplateProps) => {
                 onTouchMove={onTouchMove}
                 onPointerDown={onPointerDown}
                 onPointerMove={onPointerMove}
+                onPointerUp={onPointerUp}
             >
                 <div ref={moveRef} className={classes.slide_inner}>
                     {chunkedArray.map((chunk, idx) => {

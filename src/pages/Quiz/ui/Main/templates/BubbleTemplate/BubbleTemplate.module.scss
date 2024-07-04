@@ -16,10 +16,6 @@
     & div:nth-child(2n) {
         margin-top: 2rem;
     }
-
-    @media (width >= $breakpoint-md) {
-        justify-content: center;
-    }
 }
 
 .card {

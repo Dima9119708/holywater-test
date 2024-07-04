@@ -7,6 +7,7 @@ export const useSlide = () => {
     const stateRef = useRef({
         x: 0,
         deltaX: 0,
+        disabledSlide: false,
     });
 
     const onTouchStart = (event: React.TouchEvent) => {
@@ -14,6 +15,7 @@ export const useSlide = () => {
     };
 
     const onTouchMove = (event: React.TouchEvent) => {
+        if (stateRef.current.disabledSlide) return;
         stateRef.current.deltaX = event.changedTouches.item(0).clientX - stateRef.current.x;
 
         requestAnimationFrame(() => {
@@ -22,10 +24,12 @@ export const useSlide = () => {
     };
 
     const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+        wrapRef.current!.style.cursor = 'grabbing';
         stateRef.current.x = event.clientX - stateRef.current.deltaX;
     };
 
     const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+        if (stateRef.current.disabledSlide) return;
         if (event.pressure === 0.5 || event.pressure === 1) {
             stateRef.current.deltaX = event.clientX - stateRef.current.x;
 
@@ -37,14 +41,24 @@ export const useSlide = () => {
         }
     };
 
+    const onPointerUp = () => {
+        wrapRef.current!.style.cursor = 'grab';
+    };
+
     useEffect(() => {
-        const element = document.getElementById('root-layout');
+        const element = document.body;
 
         const resizeObserver = new ResizeObserver((entries) => {
             wrapRef.current!.style.width = `${entries[0].contentRect.width}px`;
             moveRef.current!.style.transform = `translateX(${0}px)`;
             stateRef.current.x = 0;
             stateRef.current.deltaX = 0;
+
+            if (moveRef.current!.scrollWidth >= Math.round(entries[0].contentRect.width)) {
+                stateRef.current.disabledSlide = false;
+            } else {
+                stateRef.current.disabledSlide = true;
+            }
         });
 
         resizeObserver.observe(element!);
@@ -66,6 +80,7 @@ export const useSlide = () => {
         moveRef,
         onTouchStart,
         onTouchMove,
+        onPointerUp,
         onPointerDown,
         onPointerMove,
     };
