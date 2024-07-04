@@ -58,7 +58,12 @@ const Quiz = () => {
 
     return (
         <Layout className={classes.layout}>
-            <Header isShowBack={!isStart} onBack={onBack} value={quizId} maxValue={data.length} />
+            <Header
+                isShowButtonBack={!isStart}
+                onBack={onBack}
+                valueProgress={quizId}
+                maxValueProgress={data.length}
+            />
             <Main question={currentQuiz} />
             <Footer onNext={onNext} />
         </Layout>

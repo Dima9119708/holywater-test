@@ -5,18 +5,18 @@ import { Typography } from 'shared/ui/Typography';
 
 interface HeaderProps {
     onBack: () => void;
-    isShowBack: boolean;
-    value: number;
-    maxValue: number;
+    isShowButtonBack: boolean;
+    valueProgress: number;
+    maxValueProgress: number;
 }
 
 const Header = (props: HeaderProps) => {
-    const { onBack, isShowBack, value, maxValue } = props;
+    const { onBack, isShowButtonBack, valueProgress, maxValueProgress } = props;
 
     return (
         <div>
             <div className={classes.progress_header}>
-                {isShowBack && <IconBack className={classes.back} onClick={onBack} />}
+                {isShowButtonBack && <IconBack className={classes.back} onClick={onBack} />}
                 <div className={classes.step_indicator}>
                     <Typography
                         variant="body1"
@@ -25,17 +25,17 @@ const Header = (props: HeaderProps) => {
                         color="02"
                         fontSize={1}
                     >
-                        {value}
+                        {valueProgress}
                     </Typography>
                     <Typography variant="body1" font="secondary" fontWeight="800" fontSize={1}>
                         /
                     </Typography>
                     <Typography variant="body1" font="secondary" fontWeight="800" fontSize={1}>
-                        {maxValue}
+                        {maxValueProgress}
                     </Typography>
                 </div>
             </div>
-            <LinearProgress value={value} maxValue={maxValue + 1} />
+            <LinearProgress value={valueProgress} maxValue={maxValueProgress + 1} />
         </div>
     );
 };
