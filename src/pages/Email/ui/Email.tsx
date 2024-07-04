@@ -48,7 +48,7 @@ const Email = () => {
     };
 
     return (
-        <Layout gridTemplateRows="1fr auto">
+        <Layout className={classes.layout}>
             <div>
                 <Typography
                     className={classes.title}

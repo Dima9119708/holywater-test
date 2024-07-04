@@ -1,3 +1,17 @@
+@import '../../../app/styles/variables';
+
+.layout {
+    grid-template-rows: 1fr auto;
+
+    @media (width >= $breakpoint-md) {
+        grid-template-rows: auto 1fr;
+
+        & > div:nth-child(2) {
+            margin-top: 10rem;
+        }
+    }
+}
+
 .block_head {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,13 @@
+@import '../../../../app/styles/variables';
+
+.layout {
+    grid-template-rows: auto 1fr auto;
+
+    @media (width >= $breakpoint-md) {
+        grid-template-rows: auto auto 1fr;
+
+        & > div:nth-child(3) {
+            margin-top: 5rem;
+        }
+    }
+}

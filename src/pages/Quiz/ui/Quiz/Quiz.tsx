@@ -10,6 +10,7 @@ import { QuizResponse } from 'pages/Quiz';
 import { RoutersPath } from 'shared/const/routers.ts';
 import { LANGUAGE_QUESTION_KEY } from 'shared/const';
 import { Layout } from 'shared/layouts/Layout';
+import classes from './Quiz.module.scss';
 
 const Quiz = () => {
     const { id } = useParams();
@@ -56,7 +57,7 @@ const Quiz = () => {
     };
 
     return (
-        <Layout gridTemplateRows="auto 1fr auto">
+        <Layout className={classes.layout}>
             <Header isShowBack={!isStart} onBack={onBack} value={quizId} maxValue={data.length} />
             <Main question={currentQuiz} />
             <Footer onNext={onNext} />

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 export const useSlide = () => {
     const moveRef = useRef<HTMLDivElement>(null);
+    const wrapRef = useRef<HTMLDivElement>(null);
 
     const stateRef = useRef({
         x: 0,
@@ -39,11 +40,21 @@ export const useSlide = () => {
     useEffect(() => {
         const element = document.getElementById('root-layout');
 
+        const resizeObserver = new ResizeObserver((entries) => {
+            wrapRef.current!.style.width = `${entries[0].contentRect.width}px`;
+            moveRef.current!.style.transform = `translateX(${0}px)`;
+            stateRef.current.x = 0;
+            stateRef.current.deltaX = 0;
+        });
+
+        resizeObserver.observe(element!);
+
         if (element) {
             element.style.overflow = 'hidden';
         }
 
         return () => {
+            resizeObserver.disconnect();
             if (element) {
                 element.style.overflow = '';
             }
@@ -51,6 +62,7 @@ export const useSlide = () => {
     }, []);
 
     return {
+        wrapRef,
         moveRef,
         onTouchStart,
         onTouchMove,

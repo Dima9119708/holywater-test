@@ -1,8 +1,14 @@
+@import '../../../../app/styles/variables';
+
 .root {
     display: flex;
     min-height: 100%;
     padding: 2rem;
     background-color: var(--color-01);
     color: var(--color-03);
-    overflow: hidden;
+
+    @media (width >= $breakpoint-md) {
+        max-width: 76.2rem;
+        margin: 0 auto;
+    }
 }
