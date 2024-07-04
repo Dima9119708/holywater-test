@@ -6,8 +6,10 @@
     padding: 2rem;
     background-color: var(--color-01);
     color: var(--color-03);
+    overflow: hidden;
 
     @media (width >= $breakpoint-md) {
+        overflow: unset;
         max-width: 76.2rem;
         margin: 0 auto;
     }
