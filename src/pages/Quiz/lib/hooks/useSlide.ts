@@ -30,6 +30,7 @@ export const useSlide = () => {
 
     const onPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
         if (stateRef.current.disabledSlide) return;
+
         if (event.pressure === 0.5 || event.pressure === 1) {
             stateRef.current.deltaX = event.clientX - stateRef.current.x;
 
@@ -46,7 +47,7 @@ export const useSlide = () => {
     };
 
     useEffect(() => {
-        const element = document.body;
+        const element = document.getElementById('root-layout');
 
         const resizeObserver = new ResizeObserver((entries) => {
             wrapRef.current!.style.width = `${entries[0].contentRect.width}px`;
@@ -54,7 +55,7 @@ export const useSlide = () => {
             stateRef.current.x = 0;
             stateRef.current.deltaX = 0;
 
-            if (moveRef.current!.scrollWidth >= Math.round(entries[0].contentRect.width)) {
+            if (moveRef.current!.scrollWidth > Math.round(entries[0].contentRect.width)) {
                 stateRef.current.disabledSlide = false;
             } else {
                 stateRef.current.disabledSlide = true;
@@ -64,13 +65,13 @@ export const useSlide = () => {
         resizeObserver.observe(element!);
 
         if (element) {
-            element.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
         }
 
         return () => {
             resizeObserver.disconnect();
             if (element) {
-                element.style.overflow = '';
+                document.body.style.overflow = '';
             }
         };
     }, []);
