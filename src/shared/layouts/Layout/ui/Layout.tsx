@@ -1,5 +1,5 @@
 import classes from './Layout.module.scss';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { cn } from 'shared/lib/classNames';
 
 interface LayoutProps {

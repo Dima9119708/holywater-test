@@ -1,4 +1,5 @@
-import { InputHTMLAttributes, useEffect, useState } from 'react';
+import type { InputHTMLAttributes } from 'react';
+import { useEffect, useState } from 'react';
 import classes from './Checkbox.module.scss';
 import { cn } from 'shared/lib/classNames';
 import IconCheck from '../icon/check.component.svg';

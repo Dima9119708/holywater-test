@@ -1,4 +1,5 @@
-import React, { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+import React from 'react';
 import classes from './Card.module.scss';
 import { cn } from 'shared/lib/classNames';
 

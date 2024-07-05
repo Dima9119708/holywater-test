@@ -6,7 +6,7 @@ const ErrorQuiz = () => {
 
     useEffect(() => {
         navigate('/quiz/1');
-    }, []);
+    }, [navigate]);
 
     return null;
 };

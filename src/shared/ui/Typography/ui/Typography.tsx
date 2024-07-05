@@ -1,4 +1,5 @@
-import { createElement, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+import { createElement } from 'react';
 import { cn } from 'shared/lib/classNames';
 import classes from './Typography.module.scss';
 

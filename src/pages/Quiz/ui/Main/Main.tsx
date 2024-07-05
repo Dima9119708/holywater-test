@@ -5,7 +5,7 @@ import SingleSelectImageTemplate from 'pages/Quiz/ui/Main/templates/SingleSelect
 import MultipleSelectTemplate from 'pages/Quiz/ui/Main/templates/MultipleSelectTemplate/MultipleSelectTemplate.tsx';
 import BubbleTemplate from 'pages/Quiz/ui/Main/templates/BubbleTemplate/BubbleTemplate.tsx';
 
-import { MainProps } from 'pages/Quiz/types/types.ts';
+import type { MainProps } from 'pages/Quiz/types/types.ts';
 
 const Main = (props: MainProps) => {
     const { question } = props;

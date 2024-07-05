@@ -65,7 +65,7 @@ export const useCircularProgress = (props: UseCircularProgressProps) => {
 
     const percentage = useMemo(() => {
         return clampPercentage((percent - minValue) / (maxValue - minValue), 1);
-    }, [percent, minValue, maxValue]);
+    }, [clampPercentage, percent, minValue, maxValue]);
 
     const offset = circumference - percentage * circumference;
 

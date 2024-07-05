@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Card } from 'shared/ui/Card';
 import classes from './BubbleTemplate.module.scss';
 import { Typography } from 'shared/ui/Typography';
-import { TemplateProps } from 'pages/Quiz/types/types.ts';
+import type { TemplateProps } from 'pages/Quiz/types/types.ts';
 import { useTemplate } from 'pages/Quiz/lib/hooks/useTemplate.ts';
 import { useMemo } from 'react';
 import { useSlide } from 'pages/Quiz/lib/hooks/useSlide.ts';

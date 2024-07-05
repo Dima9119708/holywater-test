@@ -3,7 +3,7 @@ import { Card } from 'shared/ui/Card';
 import classes from './MultipleSelectTemplate.module.scss';
 import { Typography } from 'shared/ui/Typography';
 import { Checkbox } from 'shared/ui/Checkbox';
-import { TemplateProps } from 'pages/Quiz/types/types.ts';
+import type { TemplateProps } from 'pages/Quiz/types/types.ts';
 import { useTemplate } from 'pages/Quiz/lib/hooks/useTemplate.ts';
 
 const MultipleSelectTemplate = (props: TemplateProps) => {

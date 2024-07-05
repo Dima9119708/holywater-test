@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Answers, QuizResponse } from 'pages/Quiz/types/types.ts';
+import type { Answers, QuizResponse } from 'pages/Quiz/types/types.ts';
 import { useButtonDisabled } from 'pages/Quiz/lib/hooks/useDisabledButton.tsx';
 import { getLocalStorage, setLocalStorage } from 'shared/lib/helpers/localStorage.ts';
 
@@ -23,7 +23,7 @@ export const useTemplate = (question: QuizResponse) => {
                     : [...answers, answer],
             );
         },
-        [answers],
+        [answers, isActive],
     );
 
     const onSingleSelect = useCallback(
@@ -47,7 +47,7 @@ export const useTemplate = (question: QuizResponse) => {
         } else {
             useButtonDisabled.setState({ isDisabled: false });
         }
-    }, [answers]);
+    }, [answers, question.id, question.title, question.type]);
 
     return {
         answers,

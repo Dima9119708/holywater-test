@@ -1,4 +1,4 @@
-import { Answers, QuizResponse } from 'pages/Quiz';
+import type { Answers, QuizResponse } from 'pages/Quiz';
 import { LOCAL_STORAGE_KEY } from 'shared/const';
 
 export type LocalStorageValue = {

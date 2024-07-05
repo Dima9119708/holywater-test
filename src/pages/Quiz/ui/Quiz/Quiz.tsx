@@ -6,7 +6,7 @@ import dataJson from '../../../../../mock/data.json';
 import Footer from 'pages/Quiz/ui/Footer/Footer.tsx';
 import i18 from 'shared/config/i18';
 import { getLocalStorage } from 'shared/lib/helpers/localStorage.ts';
-import { QuizResponse } from 'pages/Quiz';
+import type { QuizResponse } from 'pages/Quiz';
 import { RoutersPath } from 'shared/const/routers.ts';
 import { LANGUAGE_QUESTION_KEY } from 'shared/const';
 import { Layout } from 'shared/layouts/Layout';
