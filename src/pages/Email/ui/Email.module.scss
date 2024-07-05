@@ -35,9 +35,9 @@
 
 .text_highlight {
     color: var(--color-02);
+    line-height: 1.5;
 
     &.terms_of_use {
-        display: block;
-        margin-top: 0.8rem;
+        display: inline-block;
     }
 }

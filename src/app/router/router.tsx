@@ -1,9 +1,5 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
 import RootLayout from 'shared/layouts/RootLayout/ui/RootLayout.tsx';
-import { ErrorQuiz, Quiz } from 'pages/Quiz';
-import { Loader } from 'pages/Loader';
-import { Email } from 'pages/Email';
-import { ThankYou } from 'pages/ThankYou';
 import { RoutersPath } from 'shared/const/routers.ts';
 
 export const router = createBrowserRouter([
@@ -21,20 +17,35 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 path: `${RoutersPath.QUIZ}:id`,
-                element: <Quiz />,
-                errorElement: <ErrorQuiz />,
+                lazy: async () => {
+                    const { Quiz, ErrorQuiz } = await import('pages/Quiz');
+
+                    return {
+                        Component: Quiz,
+                        errorElement: <ErrorQuiz />,
+                    };
+                },
             },
             {
                 path: RoutersPath.LOADER,
-                element: <Loader />,
+                lazy: async () => {
+                    const { Loader } = await import('pages/Loader');
+                    return { Component: Loader };
+                },
             },
             {
                 path: RoutersPath.EMAIL,
-                element: <Email />,
+                lazy: async () => {
+                    const { Email } = await import('pages/Email');
+                    return { Component: Email };
+                },
             },
             {
                 path: RoutersPath.THANK_YOU,
-                element: <ThankYou />,
+                lazy: async () => {
+                    const { ThankYou } = await import('pages/ThankYou');
+                    return { Component: ThankYou };
+                },
             },
         ],
     },
