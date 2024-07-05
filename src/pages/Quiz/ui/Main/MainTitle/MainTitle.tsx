@@ -1,6 +1,8 @@
-import { Typography } from 'shared/ui/Typography';
-import classes from './MainTitle.module.scss';
 import { Trans, useTranslation } from 'react-i18next';
+
+import { Typography } from 'shared/ui/Typography';
+
+import classes from './MainTitle.module.scss';
 
 interface TitleProps {
     title: string;

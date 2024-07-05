@@ -1,11 +1,13 @@
-import { useTranslation } from 'react-i18next';
-import { Card } from 'shared/ui/Card';
-import classes from './BubbleTemplate.module.scss';
-import { Typography } from 'shared/ui/Typography';
-import type { TemplateProps } from 'pages/Quiz/types/types.ts';
-import { useTemplate } from 'pages/Quiz/lib/hooks/useTemplate.ts';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import { useSlide } from 'pages/Quiz/lib/hooks/useSlide.ts';
+import { useTemplate } from 'pages/Quiz/lib/hooks/useTemplate.ts';
+import type { TemplateProps } from 'pages/Quiz/types/types.ts';
+import { Card } from 'shared/ui/Card';
+import { Typography } from 'shared/ui/Typography';
+
+import classes from './BubbleTemplate.module.scss';
 
 const BubbleTemplate = (props: TemplateProps) => {
     const { question } = props;

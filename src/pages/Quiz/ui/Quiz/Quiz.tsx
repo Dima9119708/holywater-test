@@ -1,16 +1,19 @@
+import { useQuery } from '@tanstack/react-query';
+import { useNavigate, useParams } from 'react-router-dom';
+
+import type { QuizResponse } from 'pages/Quiz';
+import Footer from 'pages/Quiz/ui/Footer/Footer.tsx';
 import Header from 'pages/Quiz/ui/Header/Header.tsx';
 import Main from 'pages/Quiz/ui/Main/Main.tsx';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import dataJson from '../../../../../mock/data.json';
-import Footer from 'pages/Quiz/ui/Footer/Footer.tsx';
 import i18 from 'shared/config/i18';
-import { getLocalStorage } from 'shared/lib/helpers/localStorage.ts';
-import type { QuizResponse } from 'pages/Quiz';
-import { RoutersPath } from 'shared/const/routers.ts';
 import { LANGUAGE_QUESTION_KEY } from 'shared/const';
+import { RoutersPath } from 'shared/const/routers.ts';
 import { Layout } from 'shared/layouts/Layout';
+import { getLocalStorage } from 'shared/lib/helpers/localStorage.ts';
+
 import classes from './Quiz.module.scss';
+
+import dataJson from '../../../../../mock/data.json';
 
 const Quiz = () => {
     const { id } = useParams();

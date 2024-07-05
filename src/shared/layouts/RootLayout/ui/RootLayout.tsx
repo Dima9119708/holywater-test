@@ -1,5 +1,6 @@
-import classes from './RootLayout.module.scss';
 import { Outlet } from 'react-router-dom';
+
+import classes from './RootLayout.module.scss';
 
 const RootLayout = () => {
     return (

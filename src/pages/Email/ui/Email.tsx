@@ -1,14 +1,16 @@
-import { Button } from 'shared/ui/Button';
-import { Trans, useTranslation } from 'react-i18next';
 import React, { useState } from 'react';
-import { Typography } from 'shared/ui/Typography';
-import classes from './Email.module.scss';
-import { Input } from 'shared/ui/Input';
-import { cn } from 'shared/lib/classNames';
+import { Trans, useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { setLocalStorage } from 'shared/lib/helpers/localStorage.ts';
+
 import { RoutersPath } from 'shared/const/routers.ts';
 import { Layout } from 'shared/layouts/Layout';
+import { cn } from 'shared/lib/classNames';
+import { setLocalStorage } from 'shared/lib/helpers/localStorage.ts';
+import { Button } from 'shared/ui/Button';
+import { Input } from 'shared/ui/Input';
+import { Typography } from 'shared/ui/Typography';
+
+import classes from './Email.module.scss';
 
 const Email = () => {
     const { t } = useTranslation();

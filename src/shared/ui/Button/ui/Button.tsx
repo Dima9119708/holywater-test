@@ -1,6 +1,8 @@
-import type { PropsWithChildren, ButtonHTMLAttributes } from 'react';
-import classes from './Button.module.scss';
+import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
+
 import { cn } from 'shared/lib/classNames';
+
+import classes from './Button.module.scss';
 
 interface ButtonProps extends PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>> {
     disabled?: boolean;

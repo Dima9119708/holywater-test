@@ -1,4 +1,5 @@
 import classes from './CircularProgressWithLabel.module.scss';
+
 import type { UseCircularProgressProps } from '../lib/hooks/useCircularProgress.tsx';
 import { useCircularProgress } from '../lib/hooks/useCircularProgress.tsx';
 

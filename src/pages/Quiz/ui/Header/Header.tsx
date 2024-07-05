@@ -1,7 +1,8 @@
 import IconBack from 'shared/assets/images/back.component.svg';
-import classes from './Header.module.scss';
 import { LinearProgress } from 'shared/ui/LinearProgress';
 import { Typography } from 'shared/ui/Typography';
+
+import classes from './Header.module.scss';
 
 interface HeaderProps {
     onBack: () => void;

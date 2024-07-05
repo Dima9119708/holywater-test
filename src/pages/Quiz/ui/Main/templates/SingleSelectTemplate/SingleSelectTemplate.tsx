@@ -1,9 +1,11 @@
-import { Typography } from 'shared/ui/Typography';
-import { Card } from 'shared/ui/Card';
-import classes from './SingleSelectTemplate.module.scss';
 import { useTranslation } from 'react-i18next';
-import type { TemplateProps } from 'pages/Quiz/types/types.ts';
+
 import { useTemplate } from 'pages/Quiz/lib/hooks/useTemplate.ts';
+import type { TemplateProps } from 'pages/Quiz/types/types.ts';
+import { Card } from 'shared/ui/Card';
+import { Typography } from 'shared/ui/Typography';
+
+import classes from './SingleSelectTemplate.module.scss';
 
 const SingleSelectTemplate = (props: TemplateProps) => {
     const { question } = props;

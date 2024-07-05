@@ -1,6 +1,7 @@
-import { Button } from 'shared/ui/Button';
 import { useTranslation } from 'react-i18next';
+
 import { useButtonDisabled } from 'pages/Quiz/lib/hooks/useDisabledButton.tsx';
+import { Button } from 'shared/ui/Button';
 
 interface FooterProps {
     onNext: () => void;

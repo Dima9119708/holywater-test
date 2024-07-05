@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import type { Answers, QuizResponse } from 'pages/Quiz/types/types.ts';
+
 import { useButtonDisabled } from 'pages/Quiz/lib/hooks/useDisabledButton.tsx';
+import type { Answers, QuizResponse } from 'pages/Quiz/types/types.ts';
 import { getLocalStorage, setLocalStorage } from 'shared/lib/helpers/localStorage.ts';
 
 export const useTemplate = (question: QuizResponse) => {

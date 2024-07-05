@@ -1,13 +1,15 @@
-import classes from './Loader.module.scss';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+
+import { RoutersPath } from 'shared/const/routers.ts';
+import { Layout } from 'shared/layouts/Layout';
 import {
     CircularProgressWithLabel,
     useCircularProgressInterval,
 } from 'shared/ui/CircularProgressWithLabel';
 import { Typography } from 'shared/ui/Typography';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import { RoutersPath } from 'shared/const/routers.ts';
-import { Layout } from 'shared/layouts/Layout';
+
+import classes from './Loader.module.scss';
 
 const Loader = () => {
     const { t } = useTranslation();

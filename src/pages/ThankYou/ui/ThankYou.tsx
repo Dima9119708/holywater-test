@@ -1,16 +1,17 @@
-import { Typography } from 'shared/ui/Typography';
+import { useMemo } from 'react';
+import { CSVLink } from 'react-csv';
 import { useTranslation } from 'react-i18next';
-import classes from './ThankYou.module.scss';
+import { useNavigate } from 'react-router-dom';
+
 import CheckIcon from 'shared/assets/images/checkmark.component.svg';
 import DownloadIcon from 'shared/assets/images/download.component.svg';
-import { Button } from 'shared/ui/Button';
-import { useNavigate } from 'react-router-dom';
-import { CSVLink } from 'react-csv';
-import { useMemo } from 'react';
-
-import { getLocalStorage } from 'shared/lib/helpers/localStorage.ts';
 import { RoutersPath } from 'shared/const/routers.ts';
 import { Layout } from 'shared/layouts/Layout';
+import { getLocalStorage } from 'shared/lib/helpers/localStorage.ts';
+import { Button } from 'shared/ui/Button';
+import { Typography } from 'shared/ui/Typography';
+
+import classes from './ThankYou.module.scss';
 
 const regexRemoveTagsInTranslate = /<\/?[^>]+(>|$)/g;
 

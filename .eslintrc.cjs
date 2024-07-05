@@ -31,9 +31,6 @@ module.exports = {
         ],
         'import/no-unresolved': [
             'error',
-            {
-                ignore: ['@i18n/'],
-            },
         ],
         'i18next/no-literal-string': [
             'error',

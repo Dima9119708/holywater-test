@@ -1,7 +1,10 @@
 import type { InputHTMLAttributes } from 'react';
 import { useEffect, useState } from 'react';
-import classes from './Checkbox.module.scss';
+
 import { cn } from 'shared/lib/classNames';
+
+import classes from './Checkbox.module.scss';
+
 import IconCheck from '../icon/check.component.svg';
 
 interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {

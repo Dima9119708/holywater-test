@@ -1,10 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import { Card } from 'shared/ui/Card';
-import classes from './MultipleSelectTemplate.module.scss';
-import { Typography } from 'shared/ui/Typography';
-import { Checkbox } from 'shared/ui/Checkbox';
-import type { TemplateProps } from 'pages/Quiz/types/types.ts';
+
 import { useTemplate } from 'pages/Quiz/lib/hooks/useTemplate.ts';
+import type { TemplateProps } from 'pages/Quiz/types/types.ts';
+import { Card } from 'shared/ui/Card';
+import { Checkbox } from 'shared/ui/Checkbox';
+import { Typography } from 'shared/ui/Typography';
+
+import classes from './MultipleSelectTemplate.module.scss';
 
 const MultipleSelectTemplate = (props: TemplateProps) => {
     const { question } = props;
